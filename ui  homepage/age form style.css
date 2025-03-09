@@ -139,67 +139,75 @@ h2 {
 
 /* Specific deco images with different animation durations */
 .deco1 {
-    top: 5rem; /* 90px from the top */
-    left: 2rem; /* 40px from the left */
-    width: 80px; /* Adjust width as needed */
-    height: 80px; /* Adjust height as needed */
+    top: 6rem; /* 90px from the top */
+    left: 6rem; /* 40px from the left */
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
     animation-duration: 2s; /* Faster animation */
 }
 
 .deco2 {
-    top: 15rem; /* 200px from the top */
-    left: 10rem; /* 200px from the left */
-    width: 60px; /* Adjust width as needed */
-    height: 60px; /* Adjust height as needed */
+    top: 16em; /* 200px from the top */
+    left: 22rem; /* 200px from the left */
+    width: 70px; /* Adjust width as needed */
+    height: 70px; /* Adjust height as needed */
     animation-duration: 4s; /* Slower animation */
 }
 
 .deco3 {
     top: 25rem; /* 300px from the top */
-    left: 2rem; /* 100px from the left */
-    width: 105px; /* Adjust width as needed */
-    height: 105px; /* Adjust height as needed */
+    left: 5rem; /* 100px from the left */
+    width: 110px; /* Adjust width as needed */
+    height: 110px; /* Adjust height as needed */
     animation-duration: 3s; /* Medium speed animation */
 }
 
 .deco4 {
-    top: 40rem; /* 300px from the top */
-    left: 3.5rem; /* 100px from the left */
-    width: 60px; /* Adjust width as needed */
-    height: 60px; /* Adjust height as needed */
+    top: 35rem; /* 300px from the top */
+    left: 16rem; /* 100px from the left */
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
     animation-duration: 5s; /* Medium speed animation */
 }
 
 .deco5 {
-    top: 5rem; /* 90px from the top */
-    right: 2rem; /* 40px from the left */
-    width: 60px; /* Adjust width as needed */
-    height: 60px; /* Adjust height as needed */
+    top: 6rem; /* 90px from the top */
+    right: 19em; /* 40px from the left */
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
     animation-duration: 2s; /* Faster animation */
 }
 
 .deco6 {
-    top: 20rem; /* 200px from the top */
-    right: 10rem; /* 200px from the left */
-    width: 75px; /* Adjust width as needed */
-    height: 75px; /* Adjust height as needed */
+    top: 25rem; /* 200px from the top */
+    right: 13rem; /* 200px from the left */
+    width: 150px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
     animation-duration: 4s; /* Slower animation */
 }
 
 .deco7 {
-    top: 25rem; /* 300px from the top */
-    right: 2rem; /* 100px from the left */
+    top: 20rem; /* 300px from the top */
+    right: 10rem; /* 100px from the left */
     width: 55px; /* Adjust width as needed */
     height: 55px; /* Adjust height as needed */
     animation-duration: 3s; /* Medium speed animation */
 }
 
 .deco8 {
-    top: 40rem; /* 300px from the top */
+    top: 42rem; /* 300px from the top */
     right: 3.5rem; /* 100px from the left */
     width: 95px; /* Adjust width as needed */
     height: 95px; /* Adjust height as needed */
     animation-duration: 5s; /* Medium speed animation */
+}
+
+.deco9 {
+    top: 40rem; /* 300px from the top */
+    right: 28rem; /* 100px from the left */
+    width: 55px; /* Adjust width as needed */
+    height: 55px; /* Adjust height as needed */
+    animation-duration: 3s; /* Medium speed animation */
 }
 
 /* Keyframes for up and down movement */
