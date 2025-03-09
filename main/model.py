@@ -34,7 +34,6 @@ def get_predictions(data: UserInput):
     prompt = f""" Im a mental health expert and you are my model that i have trained. 
     Predict mood, productivity, and stress levels (1-10) based on:
 
-    - Gender: {data.gender}
     - Age: {data.age}
     - Caffeine Intake: {data.caffeine_intake} cups/day
     - Exercise Time: {data.exercise_time} hours/day
@@ -101,6 +100,7 @@ def predict(user_input: UserInput):
     try:
         return get_predictions(user_input)
     except Exception as e:
+        print(e)
         raise HTTPException(status_code=500, detail=str(e))
 
 # ✅ API to Fetch Stored Predictions
