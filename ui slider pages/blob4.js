@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to map slider values to image filenames
     function getImage(value) {
         if (value <= 2) {
+<<<<<<< HEAD
             return "cmd-f.png";  // Happy blob
         } else if (value <= 4) {
             return "cmd-f2.png"; // Neutral blob
@@ -15,6 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
             return "cmd-f3.png";
         } else if (value <= 8) {
             return "cmd-f4.png"; // Sad blob
+=======
+            return "cmd-f.png";  // Happy blob   
+        } else if (value <= 4) {
+            return "cmd-f2.png"; // Neutral blob    
+        } else if (value <= 6) {
+            return "cmd-f3.png";
+        } else if (value <= 8) {
+            return "cmd-f4.png"; // Sad blob  
+>>>>>>> 9fd0634dde32d37c498b77d1c72cf336c1bc93db
         } else {
             return "caffeine.png";
         }
@@ -57,6 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener("click", function () {
         localStorage.setItem("caffeineIntake", slider.value);
         createItem();
+<<<<<<< HEAD
+=======
+          
+>>>>>>> 9fd0634dde32d37c498b77d1c72cf336c1bc93db
     });
 
     const createItem = async () => {

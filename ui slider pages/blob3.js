@@ -1,20 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("slider");
     const blobImage = document.getElementById("blobImage");
-    const nextButton = document.querySelector(".next-button"); // Ensure button is selected
+    const nextButton = document.querySelector(".next-button");   
 
     let lastImage = ""; // Store the last image to detect transitions
 
     // Function to map slider values to image filenames
     function getImage(value) {
         if (value <= 0.5) {
-            return "cmd-f.png";  // Happy blob (Low screen time)
+            return "cmd-f.png";  // Happy blob   
         } else if (value <= 1) {
-            return "cmd-f2.png"; // Neutral blob (Medium screen time)
+            return "cmd-f2.png"; // Neutral blob    
         } else if (value <= 1.5) {
             return "cmd-f3.png";
         } else if (value <= 2) {
-            return "cmd-f4.png"; // Sad blob (High screen time)
+            return "cmd-f4.png"; // Sad blob  
         } else {
             return "exercise.png";
         }
@@ -56,6 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     nextButton.addEventListener("click", function () {
         localStorage.setItem("exerciseHours", slider.value);
-        window.location.href = "slider4.html"; // Change to the actual next page URL
+        window.location.href = "slider4.html";   
     });
 });
