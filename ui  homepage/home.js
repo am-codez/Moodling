@@ -9,7 +9,5 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener("click", function () {
         window.location.href = "../ui slider pages/slider.html"; 
     });
-
-    // Initialize the slider and blob image
-    loadStoredValue();
+ 
 });

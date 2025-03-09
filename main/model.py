@@ -23,7 +23,6 @@ app = FastAPI(title="Mood Predictor API", version="1.0")
 
 # Define input schema for writing user input
 class UserInput(BaseModel):
-    gender: str
     age: int
     caffeine_intake: float
     exercise_time: float
@@ -79,49 +78,35 @@ def get_predictions(data: UserInput):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f" Unexpected error: {str(e)}")
 
-# ✅ API to Write User Input to `data.json`
-@app.post("/write", summary="Write User Input to JSON")
-def write_data(user_input: UserInput):
-    try:
-        writer = JsonWriter(
-            age=user_input.age,
-            gender=user_input.gender,
-            sleep_hours=user_input.sleep_time,
-            exercise_hours=user_input.exercise_time,
-            caffeine_intake=user_input.caffeine_intake,
-            screen_time=user_input.screen_time
-        )
-        writer.save_to_json()
-        return {"message": "User input saved successfully"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+# # ✅ API to Write User Input to `data.json`
+# @app.post("/write", summary="Write User Input to JSON")
+# def write_data(user_input: UserInput):
+#     try:
+#         writer = JsonWriter(
+#             age=user_input.age,
+#             gender=user_input.gender,
+#             sleep_hours=user_input.sleep_time,
+#             exercise_hours=user_input.exercise_time,
+#             caffeine_intake=user_input.caffeine_intake,
+#             screen_time=user_input.screen_time
+#         )
+#         writer.save_to_json()
+#         return {"message": "User input saved successfully"}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e))
 
 # ✅ API to Predict Mood Based on Last Entry
-@app.post("/predict", summary="Predict Mood, Productivity, and Stress (1-10)")
-def predict():
+@app.post("/predict", summary="Predict Mood, Productivity, and Stress")
+def predict(user_input: UserInput):
     try:
-        # Read stored data
-        data = JsonReader.read()
-        if not data["entries"]:
-            raise HTTPException(status_code=400, detail="No data available for prediction.")
-
-        # Use the latest entry for prediction
-        latest_entry = data["entries"][-1]["input"]
-        prediction = get_predictions(UserInput(**latest_entry))
-
-        # Store prediction in `data.json`
-        data["entries"][-1]["prediction"] = prediction
-        with open("data.json", "w") as file:
-            json.dump(data, file, indent=4)
-
-        return prediction
+        return get_predictions(user_input)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
 # ✅ API to Fetch Stored Predictions
-@app.get("/data", summary="Get all stored predictions")
-def get_stored_data():
-    return JsonReader.read()
+# @app.get("/data", summary="Get all stored predictions")
+# def get_stored_data():
+#     return JsonReader.read()
 
 # Run FastAPI server
 if __name__ == "__main__":
