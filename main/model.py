@@ -52,7 +52,7 @@ def get_predictions(data: UserInput):
     """
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-pro")
+        model = genai.GenerativeModel("gemini-2.0-flash")
         response = model.generate_content(prompt)
 
         # Debugging: Print raw AI response

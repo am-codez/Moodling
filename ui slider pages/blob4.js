@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("Result", JSON.stringify(data));
 
             console.log('Success:', data);
+            
             window.location.href = "../ui result page/results copy.html";
         } catch (error) {
             console.error('Error:', error);
