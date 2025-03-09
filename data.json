@@ -1,0 +1,19 @@
+{
+    "entries": [
+        {
+            "input": {
+                "gender": "male",
+                "age": 22,
+                "caffeine_intake": 2.0,
+                "exercise_time": 1.0,
+                "sleep_time": 7.0,
+                "screen_time": 3.0
+            },
+            "prediction": {
+                "mood": 7,
+                "productivity": 6,
+                "stress": 4
+            }
+        }
+    ]
+}
