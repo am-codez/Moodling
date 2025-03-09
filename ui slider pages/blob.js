@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextButton = document.querySelector(".next-button");
 
     // Store the last image to detect transitions
-    let lastImage = ""; 
+    let lastImage = "";
 
     // Function to map slider values to image filenames
     function getImage(value) {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             blobImage.classList.add("bob-animation");
         }
 
-           
+
     }
 
     // Function to update the slider track color dynamically
@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Navigate to next page while preserving state
     nextButton.addEventListener("click", function () {
         localStorage.setItem("screenTime", slider.value);
-        window.location.href = "slider2.html";   
+        window.location.href = "slider2.html";
     });
 
-       
+
 });
