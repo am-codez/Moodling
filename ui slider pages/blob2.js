@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("slider");
     const blobImage = document.getElementById("blobImage");
-    const nextButton = document.querySelector(".next-button");   
+    const nextButton = document.querySelector(".next-button"); // Ensure button is selected
 
 
     let lastImage = ""; // Store the last image to detect transitions
@@ -58,6 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     nextButton.addEventListener("click", function () {
         localStorage.setItem("sleepHours", slider.value);
-        window.location.href = "slider3.html";   
+        window.location.href = "slider3.html"; // Change to the actual next page URL
     });
 });
