@@ -1,0 +1,55 @@
+body {
+    background-color: #23223C; /* Change this to your desired background color */
+    text-align: center; /* Center all text */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    /* justify-content: center; Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    position: relative; /* Set position to relative for absolute positioning of children */
+}
+
+.titles {
+    align-items: center;
+    padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    color: white; /* Set all heading text to white */
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 3rem; /* No margin for h1 */
+    font-weight: bold;
+}
+
+h2 {
+    margin: 1rem 2rem; /* Reduced margin for h2 */
+}
+
+.button {
+    display: inline-block; /* Makes the button-like div behave like a button */
+    padding: 0px 25px; /* Adds some padding */
+    background-color: #02B271; /* Button background color */
+    color: white; /* Text color */
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin: 1rem 0; /* Reduced margin for button */
+}
+
+.image-container {
+    position: absolute; /* Position the image container absolutely */
+    bottom: 0; /* Stick to the bottom of the page */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-80%); /* Adjust for centering */
+    margin-top: 5rem; /* Add some space above the image */
+}
+
+.responsive-image {
+    width: 160%; /* Adjust the width as needed (e.g., 80% of the container) */
+    height: auto; /* Maintain aspect ratio */
+}

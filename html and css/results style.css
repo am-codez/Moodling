@@ -11,7 +11,7 @@ body {
 
 .titles {
     align-items: center;
-    padding-top: 120px;
+    padding-top: 50px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3rem;
-    margin: 0; /* No margin for h1 */
+    margin: 3rem; /* No margin for h1 */
     font-weight: bold;
 }
 
