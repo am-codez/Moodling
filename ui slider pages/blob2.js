@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("slider");
     const blobImage = document.getElementById("blobImage");
-    const nextButton = document.querySelector(".next-button"); // Ensure button is selected
+    const nextButton = document.querySelector(".next-button");   
 
 
     let lastImage = ""; // Store the last image to detect transitions
@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to map slider values to image filenames
     function getImage(value) {
         if (value <= 1.5) {
-            return "cmd-f.png";  // Happy blob (Low screen time)
+            return "cmd-f.png";  // Happy blob   
         } else if (value <= 3) {
-            return "cmd-f2.png"; // Neutral blob (Medium screen time)
+            return "cmd-f2.png"; // Neutral blob    
         } else if (value <= 5) {
             return "cmd-f3.png";
         } else if (value <= 8) {
-            return "cmd-f4.png"; // Sad blob (High screen time)
+            return "cmd-f4.png"; // Sad blob  
         } else {
             return "sleepy.png";
         }
@@ -58,6 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     nextButton.addEventListener("click", function () {
         localStorage.setItem("sleepHours", slider.value);
-        window.location.href = "slider3.html"; // Change to the actual next page URL
+        window.location.href = "slider3.html";   
     });
 });

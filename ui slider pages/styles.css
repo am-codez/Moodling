@@ -194,7 +194,7 @@ input[type="range"]::-moz-range-thumb:hover {
     right: 2rem; /* 100px from the left */
     width: 35px; /* Adjust width as needed */
     height: 35px; /* Adjust height as needed */
-    animation-duration: 3s; /* Medium speed animation */
+    animation-duration: 6s; /* Medium speed animation */
 }
 
 .deco8 {
