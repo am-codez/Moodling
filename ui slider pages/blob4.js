@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.getElementById("screenTimeSlider");
+    const slider = document.getElementById("slider");
     const blobImage = document.getElementById("blobImage");
 
     let lastImage = ""; // Store the last image to detect transitions
