@@ -50,6 +50,6 @@ h2 {
 }
 
 .responsive-image {
-    width: 160%; /* Adjust the width as needed (e.g., 80% of the container) */
+    width: 150%; /* Adjust the width as needed (e.g., 80% of the container) */
     height: auto; /* Maintain aspect ratio */
 }
