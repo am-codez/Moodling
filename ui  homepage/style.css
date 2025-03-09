@@ -1,14 +1,15 @@
 body {
-    background-color: #23223C; /* Change this to your desired background color */
+    background-image: linear-gradient(to bottom, #23223C, #23223C, #312F6B); /* Add the gradient background */
+    background-color: #23223C; /* Fallback background color */
     text-align: center; /* Center all text */
     display: flex; /* Use Flexbox */
     flex-direction: column; /* Stack children vertically */
-    /* justify-content: center; Center vertically */
     align-items: center; /* Center horizontally */
     height: 100vh; /* Full viewport height */
     margin: 0; /* Remove default margin */
     position: relative; /* Set position to relative for absolute positioning of children */
 }
+
 
 .titles {
     /* display: flex; */
@@ -62,7 +63,7 @@ h2 {
 
 .image-container {
     position: absolute; /* Position the image container absolutely */
-    bottom: 0; /* Stick to the bottom of the page */
+    bottom: -0.2rem; /* Stick to the bottom of the page */
     left: 49%; /* Center horizontally */
     transform: translateX(-80%); /* Adjust for centering */
     margin-top: 5rem; /* Add some space above the image */
