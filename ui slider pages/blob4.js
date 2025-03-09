@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener("click", function () {
         localStorage.setItem("caffeineIntake", slider.value);
         createItem();
-        window.location.href = "../ui result page/results.html"; // Change to the actual next page URL
+        // Change to the actual next page URL
     });
 
     const createItem = async () => {
@@ -68,6 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
             sleep_time: parseFloat(localStorage.getItem('sleepHours')),
             screen_time: parseFloat(localStorage.getItem('screenTime')),
         };
+
+    console.log("Sending data:", newItem);
+
         try {
             const response = await fetch('http://127.0.0.1:8000/predict', {
                 method: 'POST',
@@ -76,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 body: JSON.stringify(newItem)
             });
+        
     
             if (!response.ok) {
                 const errorData = await response.json();
@@ -83,11 +87,15 @@ document.addEventListener("DOMContentLoaded", function () {
             }
     
             const data = await response.json();
+
             localStorage.setItem("Result", JSON.stringify(data));
+      
             console.log('Success:', data);
+            window.location.href = "../ui result page/results.html"; 
         } catch (error) {
             console.error('Error:', error);
         }
+
     };
     
 });
