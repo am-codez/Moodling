@@ -2,17 +2,32 @@
     "entries": [
         {
             "input": {
-                "gender": "male",
-                "age": 22,
-                "caffeine_intake": 2.0,
-                "exercise_time": 1.0,
-                "sleep_time": 7.0,
-                "screen_time": 3.0
+                "gender": "string",
+                "age": 0,
+                "caffeine_intake": 0.0,
+                "exercise_time": 0.0,
+                "sleep_time": 0.0,
+                "screen_time": 0.0
             },
             "prediction": {
-                "mood": 7,
-                "productivity": 6,
-                "stress": 4
+                "mood": 3,
+                "productivity": 2,
+                "stress": 8
+            }
+        },
+        {
+            "input": {
+                "gender": "male",
+                "age": 10,
+                "caffeine_intake": 0.0,
+                "exercise_time": 2.0,
+                "sleep_time": 8.0,
+                "screen_time": 1.0
+            },
+            "prediction": {
+                "mood": 8,
+                "productivity": 7,
+                "stress": 3
             }
         }
     ]

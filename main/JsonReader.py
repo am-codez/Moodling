@@ -1,13 +1,14 @@
 import json
+import os
+
+DATA_FILE = "data.json"
 
 class JsonReader:
-    
-    # return json object as dictionary
-    def open(self):
-        with open('data.json', 'r') as file:
+    @staticmethod
+    def read():
+        if not os.path.exists(DATA_FILE):
+            return {"entries": []}
+
+        with open(DATA_FILE, "r") as file:
             data = json.load(file)
-            
-            for i in data['']:
-                return i
-            
-        file.close()
+            return data
