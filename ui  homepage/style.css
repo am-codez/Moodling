@@ -10,9 +10,7 @@ body {
     position: relative; /* Set position to relative for absolute positioning of children */
 }
 
-
 .titles {
-    /* display: flex; */
     align-items: center;
     padding-top: 108px;
 }
@@ -38,9 +36,7 @@ h1 {
 }
 
 h2 {
-    margin: 0.5rem 2rem;
-  
-  /* Reduced margin for h2 */
+    margin: 0.5rem 2rem; /* Reduced margin for h2 */
 }
 
 .button {
@@ -52,14 +48,14 @@ h2 {
     cursor: pointer; /* Changes cursor to pointer on hover */
     margin: 3rem 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
+    position: relative; /* Set position to relative */
+    z-index: 10; /* Set a high z-index to ensure it appears on top */
 }
 
 .button:hover {
     transform: scale(1.1); /* Add this to trigger the transition */
     opacity: 0.6;
 }
-
-
 
 .image-container {
     position: absolute; /* Position the image container absolutely */
