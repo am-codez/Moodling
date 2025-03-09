@@ -8,13 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to map slider values to image filenames
     function getImage(value) {
         if (value <= 2) {
-            return "cmd-f.png";  // Happy blob (Low screen time)
+            return "cmd-f.png";  // Happy blob
         } else if (value <= 4) {
-            return "cmd-f2.png"; // Neutral blob (Medium screen time)
+            return "cmd-f2.png"; // Neutral blob
         } else if (value <= 6) {
             return "cmd-f3.png";
         } else if (value <= 8) {
-            return "cmd-f4.png"; // Sad blob (High screen time)
+            return "cmd-f4.png"; // Sad blob
         } else {
             return "caffeine.png";
         }
@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener("click", function () {
         localStorage.setItem("caffeineIntake", slider.value);
         createItem();
-        // Change to the actual next page URL
     });
 
     const createItem = async () => {
@@ -67,9 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
             exercise_time: parseFloat(localStorage.getItem('exerciseHours')),
             sleep_time: parseFloat(localStorage.getItem('sleepHours')),
             screen_time: parseFloat(localStorage.getItem('screenTime')),
-        };
+        };
 
-    console.log("Sending data:", newItem);
+        console.log("Sending data:", newItem);
 
         try {
             const response = await fetch('http://127.0.0.1:8000/predict', {
@@ -79,23 +78,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 body: JSON.stringify(newItem)
             });
-        
-    
+
+
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
             }
-    
+
             const data = await response.json();
 
             localStorage.setItem("Result", JSON.stringify(data));
-      
+
             console.log('Success:', data);
-            window.location.href = "../ui result page/results.html"; 
+            window.location.href = "../ui result page/results.html";
         } catch (error) {
             console.error('Error:', error);
         }
 
     };
-    
+
 });
