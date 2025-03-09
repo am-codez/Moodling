@@ -68,7 +68,7 @@ h2 {
 /* Next Button Styling */
 .next-button {
     position: absolute; /* Position it absolutely */
-    top: 620px; /* Distance from the top */
+    top: 580px; /* Distance from the top */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust for centering */
     padding: 8px 29px; /* Padding for the button */
@@ -119,7 +119,7 @@ h2 {
 }
 
 .resized-char {
-    margin-top: 5px;
+    margin-top: -20px;
     width: 340px; /* Resize to 80% of the original size */
     height: auto; /* Maintain aspect ratio */
 }
