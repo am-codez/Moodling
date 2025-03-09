@@ -2,11 +2,15 @@
 body {
     font-family: "Poppins", sans-serif;
     text-align: center;
-    background-color: #23223C;
-    color: white;
-    margin: 0;
+    background-image: linear-gradient(to bottom, #23223C, #312F6B);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
     padding: 0;
+    
 }
+
 
 /* Container */
 .results-container {

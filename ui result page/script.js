@@ -1,53 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     const stars = document.querySelectorAll(".star");
-
-//     stars.forEach(star => {
-//         star.addEventListener("click", function () {
-//             const rating = parseInt(this.getAttribute("data-value"));
-
-//             // Highlight all stars up to the selected rating
-//             stars.forEach((s, index) => {
-//                 s.classList.toggle("active", index < rating);
-//             });
-//         });
-//     });
-
-//     const val = {
-//         mood: parseFloat(localStorage.getItem('mood')),
-//         productivity: parseFloat(localStorage.getItem('productivity')),
-//         stress: parseFloat(localStorage.getItem('stress')),
-//     }
-
-//     function getMood(mood) {
-//         if (mood <= 3) {
-//             return "over the moon.png";
-//         } else if (mood <= 6) {
-//             return "at peace.png";
-//         } else if (mood <= 10) {
-//             return "worn out.png";
-//         }
-//     }
-
-//     function getProductivity(productivity) {
-//         if (productivity <= 3) {
-//             return "in the zone.png";
-//         } else if (productivity <= 6) {
-//             return "steady flow.png";
-//         } else if (productivity <= 10) {
-//             return "barely moving.png";
-//         }
-//     }
-
-//     function getStress(stress) {
-//         if (stress <= 3) {
-//             return "not stressin.png"; 
-//         } else if (stress <= 6) {
-//             return "feelin' stuffy.png";
-//         } else if (stress <= 10) {
-//             return "maxed out.png";
-//         }
-//     }
-// });
 document.addEventListener("DOMContentLoaded", function () {
     const stars = document.querySelectorAll(".star");
 
@@ -72,55 +22,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Loaded Result:", result);
 
-    // Image selection functions
-    function getMoodImage(mood) {
-        if (mood > 6) {
-            return "images/over the moon.png";
-        } else if (mood > 3) {
-            return "images/at peace.png";
-        } else {
-            return "images/worn out.png";
-        }
+    function getImage(category, value) {
+        const imageMap = {
+            mood: {
+                low: "images/worn out.png",
+                mid: "images/at peace.png",
+                high: "images/over the moon.png"
+            },
+            productivity: {
+                low: "images/barely moving.png",
+                mid: "images/steady flow.png",
+                high: "images/in the zone.png"
+            },
+            stress: {
+                low: "images/not stressin.png",
+                mid: "images/feelin' stuffy.png",
+                high: "images/maxed out.png"
+            }
+        };
+
+        if (value <= 3) return imageMap[category].low;
+        if (value <= 6) return imageMap[category].mid;
+        return imageMap[category].high;
     }
 
-    function getProductivityImage(productivity) {
-        if (productivity > 6) {
-            return "images/in the zone.png";
-        } else if (productivity > 3) {
-            return "images/steady flow.png";
-        } else {
-            return "images/barely moving.png";
-        }
-    }
+    // Select the flip card images (front & back)
+    const flipCardFronts = document.querySelectorAll(".flip-card-front img");
+    const flipCardBacks = document.querySelectorAll(".flip-card-back img");
 
-    function getStressImage(stress) {
-        if (stress <= 3) {
-            return "images/not stressin.png"; 
-        } else if (stress <= 6) {
-            return "images/feelin' stuffy.png";
-        } else {
-            return "images/maxed out.png";
-        }
-    }
-
-    // Select all flip card images
-    const flipCards = document.querySelectorAll(".flip-card img");
-
-    // Ensure enough images are present in the HTML
-    if (flipCards.length < 3) {
+    if (flipCardFronts.length < 3 || flipCardBacks.length < 3) {
         console.error("Not enough images found in the document.");
         return;
     }
-
-    // Update the images for mood, productivity, and stress
-    flipCards[0].src = getMoodImage(result.mood);
-    flipCards[1].src = getProductivityImage(result.productivity);
-    flipCards[2].src = getStressImage(result.stress);
-
-    // Add labels for debugging
-    flipCards[0].alt = `Mood: ${result.mood}`;
-    flipCards[1].alt = `Productivity: ${result.productivity}`;
-    flipCards[2].alt = `Stress: ${result.stress}`;
+    // Update the **back** images for mood, productivity, and stress
+    flipCardBacks[0].src = getImage("mood", result.mood);
+    flipCardBacks[1].src = getImage("stress", result.stress);
+    flipCardBacks[2].src = getImage("productivity", result.productivity);
 
     console.log("Updated images successfully!");
 });
