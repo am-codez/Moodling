@@ -120,7 +120,7 @@ input[type="range"]::-moz-range-thumb:hover {
 /* Next Button Styling */
 .next-button {
     position: absolute; /* Position it absolutely */
-    top: 50px; /* Distance from the top */
+    top: 30px; /* Distance from the top */
     right: 50px; /* Distance from the right */
     padding: 10px 30px; /* Padding for the button */
     background-color: #02B271; /* Button background color */
