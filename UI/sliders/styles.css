@@ -10,7 +10,7 @@ body {
 /* Increase the size of the heading */
 h2 {
     font-size: 50px; /* Bigger heading */
-    font-weight: 600;
+    font-weight: bold;
     margin-top: 40px; /* Add more spacing above */
 }
 
@@ -33,7 +33,7 @@ h2 {
 
 /* Add space above slider */
 input[type="range"] {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 
@@ -41,7 +41,7 @@ input[type="range"] {
 input[type="range"] {
     -webkit-appearance: none;
     width: 100%; /* Adjust width */
-    height: 16px; /* Thicker track */
+    height: 20px; /* Thicker track */
     background: linear-gradient(to right, #02B271 0%, #ccc 0%);
     border-radius: 12px;
     outline: none;
@@ -52,8 +52,8 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     background: #02B271;
     border-radius: 50%;
     cursor: pointer;
@@ -107,4 +107,25 @@ input[type="range"]::-moz-range-thumb:hover {
 /* Class to trigger bobbing once per transition */
 .bob-animation {
     animation: bob 0.4s ease-in-out;
+}
+
+
+/* Next Button Styling */
+.next-button {
+    position: absolute; /* Position it absolutely */
+    top: 50px; /* Distance from the top */
+    right: 50px; /* Distance from the right */
+    padding: 10px 30px; /* Padding for the button */
+    background-color: #02B271; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Hover effect for the button */
+.next-button:hover {
+    background-color: #028f5b; /* Darker shade on hover */
 }
