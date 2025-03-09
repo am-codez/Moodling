@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Screen Time Slider</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="container">
+        <h2>How many hours of screen time did you spend today?</h2>
+
+        <input type="range" id="screenTimeSlider" min="1" max="10" step="0.01" value="1">
+
+        <div class="labels">
+            <span>Low</span>
+            <span>Medium</span>
+            <span>High</span>
+        </div>
+
+        <div id="blobContainer">
+            <img id="blobImage" src="cmd-f.png" alt="Mood Blob">
+        </div>
+    </div>
+
+    <script src="blob.js"></script> 
+</body>
+</html>
