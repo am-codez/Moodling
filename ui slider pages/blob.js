@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener("click", function () {
         localStorage.setItem("screenTime", slider.value);
         localStorage.setItem("blobImage", blobImage.src);
-        window.location.href = "next-page.html"; // Change to the actual next page URL
+        window.location.href = "slider2.html"; // Change to the actual next page URL
     });
 
     // Initialize the slider and blob image
