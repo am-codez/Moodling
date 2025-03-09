@@ -214,3 +214,10 @@ input[type="range"]::-moz-range-thumb:hover {
         transform: translateY(-20px); /* Move up */
     }
 }
+
+.logo {
+    position: absolute; /* or fixed, depending on your layout */
+    top: 25px; /* adjust as needed */
+    left: 25px; /* adjust as needed */
+    width: 160px; /* adjust size as needed */
+}
