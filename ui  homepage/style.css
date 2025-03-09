@@ -40,11 +40,13 @@ h2 {
 }
 
 .button {
+    font-family: "Poppins", sans-serif;
     display: inline-block; /* Makes the button-like div behave like a button */
-    padding: 0px 25px; /* Adds some padding */
+    padding: 10px 25px; /* Adds some padding */
     background-color: #02B271; /* Button background color */
     color: white; /* Text color */
     border-radius: 50px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from the link */
     cursor: pointer; /* Changes cursor to pointer on hover */
     margin: 3rem 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
@@ -53,7 +55,7 @@ h2 {
 }
 
 .button:hover {
-    transform: scale(1.1); /* Add this to trigger the transition */
+    transform: scale(1.025); /* Add this to trigger the transition */
     opacity: 0.6;
 }
 
@@ -69,3 +71,5 @@ h2 {
     width: 164%; /* Adjust the width as needed (e.g., 80% of the container) */
     height: auto; /* Maintain aspect ratio */
 }
+
+
