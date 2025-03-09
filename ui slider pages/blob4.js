@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
             age: window.localStorage.getItem('age'),
             sleepHours: window.localStorage.getItem('sleepHours'),
             exerciseHours: window.localStorage.getItem('exerciseHours'),
-            caffeinIntake: window.localStorage.getItem('caffeinIntake'),
+            caffeineIntake: window.localStorage.getItem('caffeineIntake'),
             screenTime: window.localStorage.getItem('screenTime'),
         };
         try {

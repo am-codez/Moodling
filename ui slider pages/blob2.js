@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSliderTrack();
 
     nextButton.addEventListener("click", function () {
-        localStorage.setItem("sleepTime", slider.value);
+        localStorage.setItem("sleepHours", slider.value);
         window.location.href = "slider3.html"; // Change to the actual next page URL
     });
 });
