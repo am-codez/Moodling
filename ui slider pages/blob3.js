@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const blobImage = document.getElementById("blobImage");
     const nextButton = document.querySelector(".next-button"); // Ensure button is selected
 
-
     let lastImage = ""; // Store the last image to detect transitions
 
     // Function to map slider values to image filenames
@@ -54,6 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     nextButton.addEventListener("click", function () {
         localStorage.setItem("screenTime", slider.value);
         localStorage.setItem("blobImage", blobImage.src);
-        window.location.href = "slider3.html"; // Change to the actual next page URL
+        window.location.href = "slider4.html"; // Change to the actual next page URL
     });
 });

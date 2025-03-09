@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("screenTimeSlider");
     const blobImage = document.getElementById("blobImage");
-    const nextButton = document.querySelector(".next-button"); // Ensure button is selected
-
 
     let lastImage = ""; // Store the last image to detect transitions
 
@@ -50,10 +48,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize the slider track color on page load
     updateSliderTrack();
-
-    nextButton.addEventListener("click", function () {
-        localStorage.setItem("screenTime", slider.value);
-        localStorage.setItem("blobImage", blobImage.src);
-        window.location.href = "slider3.html"; // Change to the actual next page URL
-    });
 });
