@@ -1,17 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>3D Flip effect</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <script defer src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
+
 <body>
-    <div class="flip-card">
-        <div class="flip-card-front">
-            <img src="images/at peace.png" alt="At Peace" />
+
+    
+    <div class="results-container">
+        <h1>check out your energy reading for the day!</h1>
+
+        <div class="cards">
+            <!-- Mood Result -->
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="images/over the moon.png" alt="Mood Result">
+                </div>
+                <div class="flip-card-back">
+                    <img src="images/over the moon.png" alt="Stress Result">
+                </div>
+            </div>
+
+            <!-- Stress Level Result -->
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="images/over the moon.png" alt="Stress Result">
+                </div>
+                <div class="flip-card-back">
+                    <img src="images/over the moon.png" alt="Stress Result">
+                </div>
+            </div>
+
+            <!-- Productivity Result -->
+            <div class="flip-card">
+                <div class="flip-card-front">
+                    <img src="images/over the moon.png" alt="Productivity Result">
+                </div>
+                <div class="flip-card-back">
+                    <img src="images/over the moon.png" alt="Stress Result">
+                </div>
+            </div>
         </div>
-        <div class="flip-card-back">
-            <img src="images/feelin' stuffy.png" alt="Feelin' Stuffy" />
+
+        <!-- Star Rating System -->
+        <div class="rating-container">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
         </div>
     </div>
+
 </body>
 </html>
