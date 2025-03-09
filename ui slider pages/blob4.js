@@ -52,4 +52,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize the slider track color on page load
     updateSliderTrack();
+
+    nextButton.addEventListener("click", function () {
+        localStorage.setItem("caffeineIntake", slider.value);
+        createItem();
+        window.location.href = "../ui result page/results.html"; // Change to the actual next page URL
+    });
+
+    const createItem = async () => {
+        const newItem = await {
+            age: window.localStorage.getItem('age'),
+            sleepHours: window.localStorage.getItem('sleepHours'),
+            exerciseHours: window.localStorage.getItem('exerciseHours'),
+            caffeinIntake: window.localStorage.getItem('caffeinIntake'),
+            screenTime: window.localStorage.getItem('screenTime'),
+        };
+        try {
+            const response = await fetch('http://127.0.0.1:8000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newItem)
+            });
+    
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || `HTTP error! status: ${response.status}`);
+            }
+    
+            const data = await response.json();
+            window.localStorage.setItem("Result", data);
+            console.log('Success:', data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    };
+    
 });

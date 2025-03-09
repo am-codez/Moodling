@@ -38,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Save slider value and selected image to localStorage
-        localStorage.setItem("screenTime", value);
-        localStorage.setItem("blobImage", newImage);
     }
 
     // Function to update the slider track color dynamically
@@ -73,10 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Navigate to next page while preserving state
     nextButton.addEventListener("click", function () {
         localStorage.setItem("screenTime", slider.value);
-        localStorage.setItem("blobImage", blobImage.src);
         window.location.href = "slider2.html"; // Change to the actual next page URL
     });
 
-    // Initialize the slider and blob image
-    loadStoredValue();
+    // Initialize the slider and blob imag
 });

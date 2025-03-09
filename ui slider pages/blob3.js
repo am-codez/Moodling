@@ -55,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSliderTrack();
 
     nextButton.addEventListener("click", function () {
-        localStorage.setItem("screenTime", slider.value);
-        localStorage.setItem("blobImage", blobImage.src);
+        localStorage.setItem("exerciseHours", slider.value);
         window.location.href = "slider4.html"; // Change to the actual next page URL
     });
 });
