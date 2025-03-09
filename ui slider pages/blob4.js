@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("slider");
     const blobImage = document.getElementById("blobImage");
+    const nextButton = document.querySelector(".next-button");
 
     let lastImage = ""; // Store the last image to detect transitions
 
@@ -61,11 +62,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const createItem = async () => {
         const newItem = await {
-            age: window.localStorage.getItem('age'),
-            sleepHours: window.localStorage.getItem('sleepHours'),
-            exerciseHours: window.localStorage.getItem('exerciseHours'),
-            caffeinIntake: window.localStorage.getItem('caffeinIntake'),
-            screenTime: window.localStorage.getItem('screenTime'),
+            age: parseInt(localStorage.getItem('age')),
+            caffeine_intake: parseFloat(localStorage.getItem('caffeineIntake')),
+            exercise_time: parseFloat(localStorage.getItem('exerciseHours')),
+            sleep_time: parseFloat(localStorage.getItem('sleepHours')),
+            screen_time: parseFloat(localStorage.getItem('screenTime')),
         };
         try {
             const response = await fetch('http://127.0.0.1:8000/predict', {
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
     
             const data = await response.json();
-            window.localStorage.setItem("Result", data);
+            localStorage.setItem("Result", JSON.stringify(data));
             console.log('Success:', data);
         } catch (error) {
             console.error('Error:', error);
