@@ -12,6 +12,7 @@ h2 {
     font-size: 50px; /* Bigger heading */
     font-weight: bold;
     margin-top: 40px; /* Add more spacing above */
+    width: 100%;
 }
 
 /* Increase labels under the slider */
@@ -162,7 +163,6 @@ input[type="range"]::-moz-range-thumb:hover {
     width: 65px; /* Adjust width as needed */
     height: 65px; /* Adjust height as needed */
     animation-duration: 3s; /* Medium speed animation */
-    transform: rotate(30deg); /* Rotate the image by 45 degrees */
 }
 
 .deco4 {
@@ -174,8 +174,8 @@ input[type="range"]::-moz-range-thumb:hover {
 }
 
 .deco5 {
-    top: 5rem; /* 90px from the top */
-    right: 2rem; /* 40px from the left */
+    top: 10rem; /* 90px from the top */
+    right: 4rem; /* 40px from the left */
     width: 40px; /* Adjust width as needed */
     height: 40px; /* Adjust height as needed */
     animation-duration: 2s; /* Faster animation */
