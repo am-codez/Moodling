@@ -4,9 +4,8 @@ import os
 DATA_FILE = "data.json"
 
 class JsonWriter:
-    def __init__(self, age, gender, sleep_hours, exercise_hours, caffeine_intake, screen_time):
+    def __init__(self, age, sleep_hours, exercise_hours, caffeine_intake, screen_time):
         self.age = age
-        self.gender = gender
         self.sleep_hours = sleep_hours
         self.exercise_hours = exercise_hours
         self.caffeine_intake = caffeine_intake
@@ -15,7 +14,6 @@ class JsonWriter:
     # Return dictionary format for JSON
     def to_dict(self):
         return {
-            "gender": self.gender,
             "age": self.age,
             "caffeine_intake": self.caffeine_intake,
             "exercise_time": self.exercise_hours,

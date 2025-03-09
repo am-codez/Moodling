@@ -8,14 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to map slider values to image filenames
     function getImage(value) {
-        if (value <= 3) {
+        if (value <= 1.5) {
             return "cmd-f.png";  // Happy blob (Low screen time)
-        } else if (value <= 6) {
+        } else if (value <= 3) {
             return "cmd-f2.png"; // Neutral blob (Medium screen time)
+        } else if (value <= 5) {
+            return "cmd-f3.png";
+        } else if (value <= 8) {
+            return "cmd-f4.png"; // Sad blob (High screen time)
         } else {
-            return "cmd-f3.png"; // Sad blob (High screen time)
+            return "sleepy.png";
         }
     }
+    
 
     // Function to update the image and trigger animation only on transition
     function updateBlobImage() {
