@@ -13,7 +13,7 @@ body {
 .titles {
     /* display: flex; */
     align-items: center;
-    padding-top: 180px;
+    padding-top: 120px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -23,13 +23,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 5.3rem;
     margin: 0; /* No margin for h1 */
     font-weight: bold;
 }
 
+.highlight-habit {
+    color: #F25DFF; 
+}
+
+.highlight-impact {
+    color: #FFE93F;
+}
+
 h2 {
-    margin: 1rem 2rem; /* Reduced margin for h2 */
+    margin: 0.5rem 2rem;
+  
+  /* Reduced margin for h2 */
 }
 
 .button {
@@ -39,18 +49,27 @@ h2 {
     color: white; /* Text color */
     border-radius: 50px; /* Rounded corners */
     cursor: pointer; /* Changes cursor to pointer on hover */
-    margin: 1rem 0; /* Reduced margin for button */
+    margin: 2rem 0; /* Reduced margin for button */
+}
+
+.button a {
+    text-decoration: none; /* Remove the underline from the link */
+    color: white; /* Ensure the text color is white */
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    cursor: pointer;
 }
 
 .image-container {
     position: absolute; /* Position the image container absolutely */
     bottom: 0; /* Stick to the bottom of the page */
-    left: 50%; /* Center horizontally */
+    left: 49%; /* Center horizontally */
     transform: translateX(-80%); /* Adjust for centering */
     margin-top: 5rem; /* Add some space above the image */
 }
 
 .responsive-image {
-    width: 160%; /* Adjust the width as needed (e.g., 80% of the container) */
+    width: 164%; /* Adjust the width as needed (e.g., 80% of the container) */
     height: auto; /* Maintain aspect ratio */
 }
