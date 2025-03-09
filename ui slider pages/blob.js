@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to map slider values to image filenames
     function getImage(value) {
         if (value <= 3) {
-            return "cmd-f.png";  // Happy blob (Low screen time)
+            return "cmd-f3.png";  // Happy blob (Low screen time)
         } else if (value <= 6) {
             return "cmd-f2.png"; // Neutral blob (Medium screen time)
         } else {
-            return "cmd-f3.png"; // Sad blob (High screen time)
+            return "cmd-f.png"; // Sad blob (High screen time)
         }
     }
 
