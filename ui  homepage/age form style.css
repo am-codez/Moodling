@@ -1,0 +1,205 @@
+/* General Styling */
+
+body {
+    background-image: linear-gradient(to bottom, #23223C, #23223C, #312F6B); /* Add the gradient background */
+    background-color: #23223C; /* Fallback background color */
+    text-align: center; /* Center all text */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    position: relative; /* Set position to relative for absolute positioning of children */
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #23223C;
+    color: white;
+    font-size: 18px; /* Increase overall font size */
+}
+
+/* Increase the size of the heading */
+h2 {
+    font-size: 50px; /* Bigger heading */
+    font-weight: bold;
+    margin-top: 40px; /* Add more spacing above */
+}
+
+/* Increase labels under the slider */
+.labels {
+    display: flex;
+    justify-content: space-between; /* Spread labels equally */
+    width: 100%; /* Ensure full width */
+    padding: 10px 0; /* Add some spacing */
+    font-size: 20px; /* Adjust font size */
+    font-weight: 300; /* Medium weight */
+}
+
+/* Increase space for container */
+.container {
+    width: 50%;
+    margin: auto;
+    padding: 40px 17px; /* More space at the top */
+}
+
+.input-container {
+    margin-top: -10px; /* Space above the input box */
+    text-align: center; /* Center the label and input */
+}
+
+.input-container label {
+    font-size: 20px; /* Font size for the label */
+    color: white; /* Label color */
+}
+
+.input-container input {
+    padding: 30px; /* Padding inside the input */
+    font-size: 24px; /* Increased font size for the input text */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    width: 350px; /* Width of the input box */
+    text-align: center; /* Center the text inside the input */
+}
+
+/* Style for the placeholder */
+.input-container input::placeholder {
+    font-size: 24px; /* Increased font size for the placeholder */
+    color: rgba(133, 133, 133, 0.7); /* Placeholder color */
+    text-align: center; /* Center the placeholder text */
+}
+
+
+/* Next Button Styling */
+.next-button {
+    position: absolute; /* Position it absolutely */
+    top: 50px; /* Distance from the top */
+    right: 50px; /* Distance from the right */
+    padding: 10px 30px; /* Padding for the button */
+    background-color: #02B271; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+/* Hover effect for the button */
+.next-button:hover {
+    background-color: #028f5b; /* Darker shade on hover */
+}
+
+
+
+.button {
+    font-family: "Poppins", sans-serif;
+    display: inline-block; /* Makes the button-like div behave like a button */
+    padding: 10px 25px; /* Adds some padding */
+    background-color: #02B271; /* Button background color */
+    color: white; /* Text color */
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from the link */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin: 3rem 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    position: relative; /* Set position to relative */
+    z-index: 10; /* Set a high z-index to ensure it appears on top */
+}
+
+.button:hover {
+    transform: scale(1.025); /* Add this to trigger the transition */
+    opacity: 0.6;
+}
+
+.image-container {
+    position: absolute; /* Position the image container absolutely */
+    bottom: -0.2rem; /* Stick to the bottom of the page */
+    left: 49%; /* Center horizontally */
+    transform: translateX(-80%); /* Adjust for centering */
+    margin-top: 5rem; /* Add some space above the image */
+}
+
+.responsive-image {
+    width: 164%; /* Adjust the width as needed (e.g., 80% of the container) */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.deco {
+    position: absolute; /* Position absolutely */
+    background-size: cover; /* Cover the entire area */
+    z-index: -100; /* Ensure it is behind other content */
+    animation: moveUpDown 3s ease-in-out infinite; /* Default animation */
+}
+
+/* Specific deco images with different animation durations */
+.deco1 {
+    top: 5rem; /* 90px from the top */
+    left: 2rem; /* 40px from the left */
+    width: 60px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
+    animation-duration: 2s; /* Faster animation */
+}
+
+.deco2 {
+    top: 20rem; /* 200px from the top */
+    left: 10rem; /* 200px from the left */
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    animation-duration: 4s; /* Slower animation */
+}
+
+.deco3 {
+    top: 25rem; /* 300px from the top */
+    left: 2rem; /* 100px from the left */
+    width: 75px; /* Adjust width as needed */
+    height: 75px; /* Adjust height as needed */
+    animation-duration: 3s; /* Medium speed animation */
+}
+
+.deco4 {
+    top: 40rem; /* 300px from the top */
+    left: 3.5rem; /* 100px from the left */
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    animation-duration: 5s; /* Medium speed animation */
+}
+
+.deco5 {
+    top: 5rem; /* 90px from the top */
+    right: 2rem; /* 40px from the left */
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    animation-duration: 2s; /* Faster animation */
+}
+
+.deco6 {
+    top: 20rem; /* 200px from the top */
+    right: 10rem; /* 200px from the left */
+    width: 55px; /* Adjust width as needed */
+    height: 55px; /* Adjust height as needed */
+    animation-duration: 4s; /* Slower animation */
+}
+
+.deco7 {
+    top: 25rem; /* 300px from the top */
+    right: 2rem; /* 100px from the left */
+    width: 35px; /* Adjust width as needed */
+    height: 35px; /* Adjust height as needed */
+    animation-duration: 3s; /* Medium speed animation */
+}
+
+.deco8 {
+    top: 40rem; /* 300px from the top */
+    right: 3.5rem; /* 100px from the left */
+    width: 75px; /* Adjust width as needed */
+    height: 75px; /* Adjust height as needed */
+    animation-duration: 5s; /* Medium speed animation */
+}
+
+/* Keyframes for up and down movement */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+}
+
