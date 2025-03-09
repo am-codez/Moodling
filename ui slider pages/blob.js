@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to map slider values to image filenames
     function getImage(value) {
         if (value <= 3) {
-            return "cmd-f4.png";  // Happy blob (Low screen time)
+            return "cmd-f4.png";  // Happy blob   
 
         } else if (value <= 5) {
-            return "cmd-f3.png"; // Neutral blob (Medium screen time)
+            return "cmd-f3.png"; // Neutral blob    
         } else if (value <= 6) {
             return "cmd-f2.png";
         } else if (value <= 8) {
-            return "cmd-f.png"; // Sad blob (High screen time)
+            return "cmd-f.png"; // Sad blob  
         } else {
             return "screen time.png";
         }
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             blobImage.classList.add("bob-animation");
         }
 
-        // Save slider value and selected image to localStorage
+           
     }
 
     // Function to update the slider track color dynamically
@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Navigate to next page while preserving state
     nextButton.addEventListener("click", function () {
         localStorage.setItem("screenTime", slider.value);
-        window.location.href = "slider2.html"; // Change to the actual next page URL
+        window.location.href = "slider2.html";   
     });
 
-    // Initialize the slider and blob imag
+       
 });
