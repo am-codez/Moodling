@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("screenTimeSlider");
     const blobImage = document.getElementById("blobImage");
-    const nextButton = document.querySelector(".next-button");
 
-    // Store the last image to detect transitions
-    let lastImage = ""; 
+    let lastImage = ""; // Store the last image to detect transitions
 
     // Function to map slider values to image filenames
     function getImage(value) {
@@ -19,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to update the image and trigger animation only on transition
     function updateBlobImage() {
-        let value = parseFloat(slider.value);
+        let value = parseInt(slider.value);
         let newImage = getImage(value);
 
         if (newImage !== lastImage) { // Only animate if image changes
@@ -31,11 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
             void blobImage.offsetWidth; // Forces reflow
             blobImage.classList.add("bob-animation");
         }
-
-        // Save slider value and selected image to localStorage
-        localStorage.setItem("screenTime", value);
-        localStorage.setItem("blobImage", newImage);
     }
+
+    // Attach event listener to update image and animate only on transition
+    slider.addEventListener("input", updateBlobImage);
+
+    // Initialize the correct image on page load
+    updateBlobImage();
 
     // Function to update the slider track color dynamically
     function updateSliderTrack() {
@@ -43,35 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.style.background = `linear-gradient(to right, #02B271 ${value}%, #ccc ${value}%)`;
     }
 
-    // Attach event listener to update image and animate only on transition
-    slider.addEventListener("input", () => {
-        updateBlobImage();
-        updateSliderTrack();
-    });
+    // Attach event listener to update slider track
+    slider.addEventListener("input", updateSliderTrack);
 
-    // Load stored value on page load
-    function loadStoredValue() {
-        let storedValue = localStorage.getItem("screenTime");
-        let storedImage = localStorage.getItem("blobImage");
-
-        if (storedValue !== null) {
-            slider.value = storedValue;
-        }
-        if (storedImage !== null) {
-            blobImage.src = storedImage;
-            lastImage = storedImage;
-        }
-        updateBlobImage();
-        updateSliderTrack();
-    }
-
-    // Navigate to next page while preserving state
-    nextButton.addEventListener("click", function () {
-        localStorage.setItem("screenTime", slider.value);
-        localStorage.setItem("blobImage", blobImage.src);
-        window.location.href = "next-page.html"; // Change to the actual next page URL
-    });
-
-    // Initialize the slider and blob image
-    loadStoredValue();
+    // Initialize the slider track color on page load
+    updateSliderTrack();
 });
