@@ -10,16 +10,25 @@ body {
 
 /* Container */
 .results-container {
-    max-width: 900px;
+    max-width: 85%;
     margin: auto;
     padding: 40px;
 }
 
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    color: white; /* Set all heading text to white */
+}
+
 /* Title */
 h1 {
-    font-size: 28px;
+    font-size: 2.5rem;
+    font-weight: bold;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+    margin-top: 80px;
 }
 
 /* Cards */
@@ -29,19 +38,44 @@ h1 {
     gap: 20px;
 }
 
-.card {
-    background: white;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    width: 30%;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+/* Flip Cards */
+.flip-card {
+    position: relative;
+    width: 375px;
+    height: 414px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
-/* Images */
-.card img {
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s;
+    backface-visibility: hidden;
+}
+
+.flip-card-front img, .flip-card-back img {
     width: 100%; /* Ensure the image fits */
-    border-radius: 10px;
+    height: 100%; /* Ensure the image fits */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-back {
+    transform: rotateY(0deg);
+}
+
+.flip-card:hover .flip-card-front {
+    transform: rotateY(-180deg);
 }
 
 /* Category Labels */

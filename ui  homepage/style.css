@@ -62,13 +62,13 @@ h2 {
 .image-container {
     position: absolute; /* Position the image container absolutely */
     bottom: -0.2rem; /* Stick to the bottom of the page */
-    left: 50%; /* Center horizontally */
+    left: 51%; /* Center horizontally */
     transform: translateX(-80%); /* Adjust for centering */
     margin-top: 5rem; /* Add some space above the image */
 }
 
 .responsive-image {
-    width: 155%; /* Adjust the width as needed (e.g., 80% of the container) */
+    width: 158%; /* Adjust the width as needed (e.g., 80% of the container) */
     height: auto; /* Maintain aspect ratio */
 }
 
