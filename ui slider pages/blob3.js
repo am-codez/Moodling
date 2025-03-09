@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to map slider values to image filenames
     function getImage(value) {
-        if (value <= 0.5) {
+        if (value <= 0.2) {
             return "cmd-f.png";  // Happy blob   
-        } else if (value <= 1) {
+        } else if (value <= 0.6) {
             return "cmd-f2.png"; // Neutral blob    
-        } else if (value <= 1.5) {
+        } else if (value <= 0.9) {
             return "cmd-f3.png";
-        } else if (value <= 2) {
+        } else if (value <= 1.28) {
             return "cmd-f4.png"; // Sad blob  
         } else {
             return "exercise.png";
