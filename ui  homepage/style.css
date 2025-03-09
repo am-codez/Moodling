@@ -82,8 +82,8 @@ h2 {
 
 /* Specific deco images with different animation durations */
 .deco1 {
-    top: 5rem; /* 90px from the top */
-    left: 2rem; /* 40px from the left */
+    top: 8rem; /* 90px from the top */
+    left: 3rem; /* 40px from the left */
     width: 60px; /* Adjust width as needed */
     height: 60px; /* Adjust height as needed */
     animation-duration: 2s; /* Faster animation */
@@ -153,4 +153,12 @@ h2 {
     50% {
         transform: translateY(-20px); /* Move up */
     }
+}
+
+
+.logo {
+    position: absolute; /* or fixed, depending on your layout */
+    top: 25px; /* adjust as needed */
+    left: 25px; /* adjust as needed */
+    width: 160px; /* adjust size as needed */
 }

@@ -2,10 +2,16 @@
 body {
     font-family: "Poppins", sans-serif;
     text-align: center;
-    background-color: #23223C;
+    background-image: linear-gradient(to bottom, #23223C, #312F6B);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
+    padding: 0;
     color: white;
-    font-size: 18px; /* Increase overall font size */
+    font-size: 18px; 
 }
+
 
 /* Increase the size of the heading */
 h2 {
@@ -114,7 +120,7 @@ input[type="range"]::-moz-range-thumb:hover {
 /* Next Button Styling */
 .next-button {
     position: absolute; /* Position it absolutely */
-    top: 50px; /* Distance from the top */
+    top: 30px; /* Distance from the top */
     right: 50px; /* Distance from the right */
     padding: 10px 30px; /* Padding for the button */
     background-color: #02B271; /* Button background color */
@@ -142,11 +148,11 @@ input[type="range"]::-moz-range-thumb:hover {
 
 /* Specific deco images with different animation durations */
 .deco1 {
-    top: 5rem; /* 90px from the top */
-    left: 2rem; /* 40px from the left */
+    top: 8rem; /* 90px from the top */
+    left: 3rem; /* 40px from the left */
     width: 60px; /* Adjust width as needed */
     height: 60px; /* Adjust height as needed */
-    animation-duration: 2s; /* Faster animation */
+    animation-duration: 3s; /* Faster animation */
 }
 
 .deco2 {
@@ -213,4 +219,11 @@ input[type="range"]::-moz-range-thumb:hover {
     50% {
         transform: translateY(-20px); /* Move up */
     }
+}
+
+.logo {
+    position: absolute; /* or fixed, depending on your layout */
+    top: 25px; /* adjust as needed */
+    left: 25px; /* adjust as needed */
+    width: 160px; /* adjust size as needed */
 }
