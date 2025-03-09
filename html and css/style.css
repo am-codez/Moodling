@@ -13,7 +13,7 @@ body {
 .titles {
     /* display: flex; */
     align-items: center;
-    padding-top: 120px;
+    padding-top: 108px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,17 +49,16 @@ h2 {
     color: white; /* Text color */
     border-radius: 50px; /* Rounded corners */
     cursor: pointer; /* Changes cursor to pointer on hover */
-    margin: 2rem 0; /* Reduced margin for button */
+    margin: 3rem 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-.button a {
-    text-decoration: none; /* Remove the underline from the link */
-    color: white; /* Ensure the text color is white */
-    font-weight: bold;
-    display: block;
-    text-align: center;
-    cursor: pointer;
+.button:hover {
+    transform: scale(1.1); /* Add this to trigger the transition */
+    opacity: 0.6;
 }
+
+
 
 .image-container {
     position: absolute; /* Position the image container absolutely */
