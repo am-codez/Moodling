@@ -1,7 +1,48 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: #23223C;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.results-container {
+    max-width: 85%;
+    margin: auto;
+    padding: 40px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    color: white; /* Set all heading text to white */
+}
+
+/* Title */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-weight: 600;
+    margin-bottom: 60px;
+    margin-top: 80px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Flip Cards */
 .flip-card {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 375px;
+    height: 414px;
     perspective: 1000px;
     transform-style: preserve-3d;
 }
@@ -25,12 +66,7 @@
     object-fit: cover; /* Maintain aspect ratio */
 }
 
-.flip-card-front {
-    background-color: #000;
-}
-
 .flip-card-back {
-    background-color: #000;
     transform: rotateY(180deg);
 }
 
@@ -40,4 +76,29 @@
 
 .flip-card:hover .flip-card-front {
     transform: rotateY(-180deg);
+}
+
+/* Category Labels */
+.category {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Star Rating System */
+.rating-container {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.star {
+    cursor: pointer;
+    color: #ccc; /* Default color */
+    transition: color 0.3s ease-in-out;
+}
+
+.star.active {
+    color: gold; /* Highlighted stars */
 }
