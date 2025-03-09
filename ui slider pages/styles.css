@@ -129,3 +129,88 @@ input[type="range"]::-moz-range-thumb:hover {
 .next-button:hover {
     background-color: #028f5b; /* Darker shade on hover */
 }
+
+
+
+.deco {
+    position: absolute; /* Position absolutely */
+    background-size: cover; /* Cover the entire area */
+    z-index: -100; /* Ensure it is behind other content */
+    animation: moveUpDown 3s ease-in-out infinite; /* Default animation */
+}
+
+/* Specific deco images with different animation durations */
+.deco1 {
+    top: 5rem; /* 90px from the top */
+    left: 2rem; /* 40px from the left */
+    width: 60px; /* Adjust width as needed */
+    height: 60px; /* Adjust height as needed */
+    animation-duration: 2s; /* Faster animation */
+}
+
+.deco2 {
+    top: 20rem; /* 200px from the top */
+    left: 10rem; /* 200px from the left */
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    animation-duration: 4s; /* Slower animation */
+}
+
+.deco3 {
+    top: 25rem; /* 300px from the top */
+    left: 2rem; /* 100px from the left */
+    width: 65px; /* Adjust width as needed */
+    height: 65px; /* Adjust height as needed */
+    animation-duration: 3s; /* Medium speed animation */
+    transform: rotate(30deg); /* Rotate the image by 45 degrees */
+}
+
+.deco4 {
+    top: 40rem; /* 300px from the top */
+    left: 3.5rem; /* 100px from the left */
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    animation-duration: 5s; /* Medium speed animation */
+}
+
+.deco5 {
+    top: 5rem; /* 90px from the top */
+    right: 2rem; /* 40px from the left */
+    width: 40px; /* Adjust width as needed */
+    height: 40px; /* Adjust height as needed */
+    animation-duration: 2s; /* Faster animation */
+}
+
+.deco6 {
+    top: 20rem; /* 200px from the top */
+    right: 10rem; /* 200px from the left */
+    width: 55px; /* Adjust width as needed */
+    height: 55px; /* Adjust height as needed */
+    animation-duration: 4s; /* Slower animation */
+}
+
+.deco7 {
+    top: 25rem; /* 300px from the top */
+    right: 2rem; /* 100px from the left */
+    width: 35px; /* Adjust width as needed */
+    height: 35px; /* Adjust height as needed */
+    animation-duration: 3s; /* Medium speed animation */
+}
+
+.deco8 {
+    top: 40rem; /* 300px from the top */
+    right: 3.5rem; /* 100px from the left */
+    width: 75px; /* Adjust width as needed */
+    height: 75px; /* Adjust height as needed */
+    animation-duration: 5s; /* Medium speed animation */
+}
+
+/* Keyframes for up and down movement */
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+}
