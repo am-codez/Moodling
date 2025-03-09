@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById("slider");
     const blobImage = document.getElementById("blobImage");
+    const nextButton = document.querySelector(".next-button");
 
     let lastImage = ""; // Store the last image to detect transitions
 
