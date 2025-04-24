@@ -13,7 +13,7 @@ load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 if not GEMINI_API_KEY:
-    raise ValueError("⚠️ GEMINI_API_KEY is missing. Add it to your .env file.")
+    raise ValueError("GEMINI_API_KEY is missing. Add it to your .env file.")
 
 # Configure Gemini AI
 genai.configure(api_key=GEMINI_API_KEY)
@@ -77,7 +77,7 @@ def get_predictions(data: UserInput):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f" Unexpected error: {str(e)}")
 
-# # ✅ API to Write User Input to `data.json`
+# # API to Write User Input to `data.json`
 # @app.post("/write", summary="Write User Input to JSON")
 # def write_data(user_input: UserInput):
 #     try:
@@ -94,7 +94,7 @@ def get_predictions(data: UserInput):
 #     except Exception as e:
 #         raise HTTPException(status_code=500, detail=str(e))
 
-# ✅ API to Predict Mood Based on Last Entry
+# API to Predict Mood Based on Last Entry
 @app.post("/predict", summary="Predict Mood, Productivity, and Stress")
 def predict(user_input: UserInput):
     try:
@@ -103,7 +103,7 @@ def predict(user_input: UserInput):
         print(e)
         raise HTTPException(status_code=500, detail=str(e))
 
-# ✅ API to Fetch Stored Predictions
+# API to Fetch Stored Predictions
 # @app.get("/data", summary="Get all stored predictions")
 # def get_stored_data():
 #     return JsonReader.read()
